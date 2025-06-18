@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi presentación personal</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+  <header class="barra">
+  <h1>MI WEB PERSONAL</h1>
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#Intereses">Intereses</a></li>
+      <li><a href="#meta">Meta</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  </header>
+
+  <main>
+    <section class="tarjeta">
+      <img src="https://via.placeholder.com/150" alt="Foto de Rodrigo" class="avatar">
+      <div class="tarjeta-contenido">
+        <h2>Hola soy RODRIGO</h2>
+        <p>Soy un entusiasta del desarrollo web</p>
+      </div>
+    </section>
+    
+    <section id="inicio">
+      <h2>RODRIGO</h2>
+      <p>Hola estoy dando incio a mi primer pagina WEB</p>
+    </section>
+
+    <section id="Intereses">
+      <h2>Mis intereses</h2>
+      <p>Me gusta la tecnologia y el desarrollo</p>
+    </section>
+
+    <section id="meta">
+      <h2>Mi meta</h2>
+      <p>Quiero convertirme en desarrollador full Stack y crear sitios WEB</p>
+    </section>
+    
+    <aside>
+     <section>
+      <h2>Mis hobbies</h2>
+      <ul>
+        <li>Desarrollar</li>
+        <li>Futbol</li>
+        <li>Explorar nuevas herramientas</li>
+      </ul>
+     </section>
+
+     <section>
+      <h2>Mis metas del mes</h2>
+      <table>
+        <tr>
+          <th>Meta</th>
+          <th>Estado</th>
+        </tr>
+        <tr>
+          <td>Practicas HTML y CSS</td>
+          <td>✅</td>
+        </tr>
+        <tr>
+          <td>Subir mi prmier proyecto Github</td>
+          <td>🕐</td>
+        </tr>
+      </table>
+     </section>
+    </aside> 
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Me podes contactar a: <a href="mailto:rmcastro88@gmail.com">rmcastro88@gmail.com</a></p>
+
+      <article>
+        <h2>Formulario de contacto</h2>
+       <form id="formularioContacto">
+        <label for="nombre">Nombre</label><br>
+        <input type="text" name="nombre" id="nombre"><br><br>
+        <span id="errorNombre" class="mensaje-error"></span><br><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" name="email" id="email" required><br><br>
+        <span id="errorMail" class="mensaje-error"></span><br><br>
+
+        <button type="submit" class="boton">Enviar</button>
+       </form>
+      </article> 
+      <p id="respuesta"></p>
+
+      <button class="boton" onclick="mostrarMensaje()">Haz clic aqui</button>
+      <p id="mensaje"></p>
+      <button class="boton" onclick="CambiarTexto()">Cambiar mensaje</button>
+
+      <button class="boton" onclick="abrirModal()">Abrir mensaje secreto</button>
+      <div id="miModal" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar" onclick="cerrarModal()">&times;</span>
+          <h2>Hola Rodrigo</h2>
+          <p>Estas avanzando muy bien</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <button class="boton" onclick="abrirNuevoModal()">Ver mensaje oculto</button>
+  <div id="nuevoModal" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarNuevoModal()">&times;</span>
+      <h2>Es es un nuevo MODAL</h2>
+      <p>Ahora sabes como construirlo desde cero</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© Rodrigo - 2025</p>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>
