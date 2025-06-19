@@ -115,3 +115,36 @@ window.addEventListener("click", function (event) {
     modal2.style.display = "none";
   }
 });
+
+let tecnologiasFavoritas = ["HTML" , "CSS" , "JavaScript" , "Git"];
+console.log("Tecnologias Favoritas", tecnologiasFavoritas);
+console.log("Primera tecnologia", tecnologiasFavoritas[0]);
+console.log("Cantidad total", tecnologiasFavoritas.length);
+tecnologiasFavoritas.push("React");
+let contienePython = tecnologiasFavoritas.includes("Python");
+console.log("Incluye Python", contienePython);
+
+tecnologiasFavoritas[1] = "Tailwind";
+console.log("Reemplazamos CSS por Tailwind:", tecnologiasFavoritas);
+tecnologiasFavoritas.pop();
+console.log("Después de eliminar el último elemento:", tecnologiasFavoritas);
+tecnologiasFavoritas.shift();
+console.log("Después de eliminar el primer elemento:", tecnologiasFavoritas);
+tecnologiasFavoritas.unshift("TypeScript");
+console.log("Después de agregar TypeScript al principio:", tecnologiasFavoritas);
+tecnologiasFavoritas.splice(2, 0, "Node.js");
+console.log("Después de insertar Node.js en la posición 2:", tecnologiasFavoritas);
+
+tecnologiasFavoritas.forEach(function(tecnologia, index) {
+  console.log(`Tecnología ${index + 1}: ${tecnologia}`);
+});
+
+let proyectoWeb = {
+  titulo: "Mi página personal",
+  tecnologias: ["HTML", "CSS", "JavaScript"],
+  publicado: true,
+  mostrarInfo: function() {
+    console.log(`El proyecto "${this.titulo}" está publicado: ${this.publicado}`);
+  }
+};
+proyectoWeb.mostrarInfo();
